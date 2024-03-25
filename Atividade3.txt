@@ -1,0 +1,315 @@
+//Atividade 01
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+      
+        int nota;
+
+        System.out.println("Digite uma nota entre zero e dez: ");
+        nota = scanner.nextInt();
+
+        while (nota < 0 || nota > 10) {
+            System.out.println("Nota inválida. Digite novamente.");
+            nota = scanner.nextInt();
+        }
+
+        System.out.println("Valor válido: " + nota);
+        scanner.close();
+    }
+}
+
+
+//Atividade 06
+
+
+public class Main {
+    public static void main(String[] args) {
+        int num1 = 1;
+
+        System.out.println("Números de 1 a 20 um abaixo do outro:");
+        while (num1 <= 20) {
+            System.out.println(num1);
+            num1++;
+        }
+        System.out.println("\nNúmeros de 1 a 20 um ao lado do outro:");
+        num1 = 1;
+        while (num1 <= 20) {
+            System.out.print(num1 + " ");
+            num1++;
+        }
+    }
+}
+
+
+
+//Atividade 07
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num1=0;
+        int Maior=0;
+        int cont = 0;
+
+            while (cont < 5) {
+            System.out.print("Digite um número: ");
+            num1 = scanner.nextInt();
+   
+            if (num1 > Maior) {
+                Maior = num1;
+            }
+
+            cont++;
+        }
+
+           System.out.println("O maior número é: " + Maior);
+
+        scanner.close();
+    }
+}
+
+
+
+
+// Atividade 08
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double soma = 0;
+        double media = 0;
+        int cont = 0;
+        double num1 = 0;
+
+            while (cont < 5) {
+            System.out.print("Digite um número: ");
+            num1 = scanner.nextDouble();
+
+            soma += num1;
+
+            cont++;
+        }
+       
+        media = soma / 5;
+        
+        System.out.println("A soma é: " + soma);
+        System.out.println("A média é: " + media);
+
+        scanner.close();
+    }
+}
+
+
+
+
+// Atividae 09
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        
+      int num1 = 1;
+
+        System.out.println("Números ímpares de 1 a 50:");
+        while (num1 <= 50) {
+            if (num1 % 2 != 0) {
+                System.out.println(num1);
+            }
+            num1++;
+        }
+    }
+}
+
+
+
+// Atividade 13
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+      int resultado = 1;
+      int cont = 1;
+      int Base = 1;
+      int Expoente = 1;
+
+
+      System.out.print("Digite o expoente:     ");
+      Expoente = scanner.nextInt();
+      
+      System.out.print("Digite o número base: ");
+      Base = scanner.nextInt();
+
+      if (Expoente == 0) {
+      System.out.println("O resultado é: 1");
+        } else {
+          while (cont <= Expoente) {
+                resultado *= Base;
+                cont++;
+            }
+            System.out.println("O resultado é: " + resultado);
+     
+        }
+
+        scanner.close();
+    }
+}
+
+
+// Atividade 17
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+      int num1=0;
+      int resultado=0;
+      int cont=0;
+      int fatorial=0;
+
+        System.out.print("Digite um número : ");
+        num1 = scanner.nextInt();
+        if (num1 < 0) {
+            System.out.println("Número inválido!");
+        } else {
+            fatorial = 1;
+            cont = 1;
+
+            while (cont <= num1) {
+                fatorial *= cont;
+                cont++;
+            }
+
+            System.out.println("O fatorial de " + num1+"!" + " é: " + fatorial);
+        }
+
+        scanner.close();
+    }
+}
+
+
+// Atividade 24
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int Nnotas = 0;
+        double somaNotas = 0;
+        double Nota = 0;
+        double media = 0;
+        int cont = 0;
+
+        System.out.print("Digite o número de alunos: ");
+        Nnotas = scanner.nextInt();
+
+        while (cont < Nnotas) {
+            System.out.print("Digite a " + (cont + 1) + "ª nota: ");
+            Nota = scanner.nextDouble();
+
+            somaNotas += Nota;
+            cont++;
+        }
+
+        if (Nnotas > 0) {
+           media = somaNotas / Nnotas;
+            System.out.println("A média aritmética das notas é: " + media);
+        } else {
+            System.out.println("Não é possível calcular a média sem notas.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+// Atividade 32
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+      int num1=0;
+      int fatorial=0;
+      int cont=0;
+
+        System.out.print("Digite um número: ");
+        num1 = scanner.nextInt();
+
+        if (num1 < 0) {
+            System.out.println("número inválido!");
+        } else {
+            fatorial = 1;
+            cont = num1;
+
+            System.out.print("Fatorial de: " + num1 + "\n" + num1 + "! = ");
+
+            while (cont > 0) {
+                fatorial *= cont;
+
+                if (cont == 1) {
+                    System.out.print(cont);
+                } else {
+                    System.out.print(cont + " . ");
+                }
+
+                cont--;
+            }
+
+
+// Atividade 28
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+      int NCD=0;
+      double Valor=0;
+      double Investimento=0;
+      double Media=0;
+      int cont=0;
+
+        System.out.print("Digite o número de CDs: ");
+        NCD = scanner.nextInt();
+
+        Investimento = 0;
+        cont = 1;
+
+        while (cont <= NCD) {
+            System.out.print("Digite o valor do CD " + cont + ": R$ ");
+            Valor= scanner.nextDouble();
+
+            Investimento += Valor;
+            cont++;
+        }
+
+        Media = Investimento / NCD;
+
+        System.out.println("\nTotal investido na coleção de CDs: R$ " + Investimento);
+        System.out.println("Valor médio gasto em cada CD: R$ " + Media);
+
+        scanner.close();
+    }
+}
